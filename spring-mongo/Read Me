@@ -1,0 +1,10 @@
+# Docker Connection for linking containers
+docker run -dp EXPOSE_PORT:CONTAINER_PORT --link <DATABASE_CONTAINER>:<DATABASE_IMAGE> -d <APPLICATION_IMAGE>
+
+# Note
+- container name of docker / docker-compose must match with mongo host in application.yml 
+- Service Name & Container name must be marked as same else mongo host must match either one
+of them to run
+
+# Links
+- It will talk from service to another service not containers

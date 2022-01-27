@@ -1,0 +1,16 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+  application-service:
+    image: khushi1701/spring-mongo
+    container_name: "application_container"
+    ports:
+      - 1000:1000
+  mongo-service:
+    image: mongo
+    container_name: "mongo_container"
+    ports:
+      - 27017:27017
+    links:
+      - application-service
