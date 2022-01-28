@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mongo-container-deployment
+  name: mongo-depl
   labels:
-    app: mongo-container
+    app: mongo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mongo-container
+      app: mongo
   template:
     metadata:
       labels:
-        app: mongo-container
+        app: mongo
     spec:
       containers:
-      - name: mongo-container
-        image: mongo:latest
+      - name: mongo
+        image: mongo
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 27017
@@ -24,10 +24,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mongo-container-service
+  name: mongo-svc
 spec:
   selector:
-    app: mongo-container
+    app: mongo
   ports:
     - protocol: TCP
       port: 27017
+      targetPort: 27017

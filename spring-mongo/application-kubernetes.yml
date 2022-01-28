@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-mongo-deployment
+  name: spring-mongo-depl
   labels:
     app: spring-mongo
 spec:
@@ -21,13 +21,17 @@ spec:
         ports:
         - containerPort: 1000
         env:
-          name: DB_HOST
+        - name: DB_URL
           value: mongo
+        - name: DB_USERNAME
+          value: mongoadmin 
+        - name: DB_PASSWORD
+          value: secret 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: spring-mongo-service
+  name: spring-mongo-svc
 spec:
   type: NodePort
   selector:
