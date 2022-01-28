@@ -4,6 +4,6 @@ server:
 spring:
   data:
     mongodb:
-      host: mongo-container
+      host: mongo_container
       port: 27017
       database: Book 
