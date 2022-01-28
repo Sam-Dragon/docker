@@ -2,8 +2,6 @@ server:
   port: 1000
 
 spring:
-  data:
-    mongodb:
-      host: mongo_container
-      port: 27017
-      database: Book 
+  profiles:
+    active:
+    - kubernetes

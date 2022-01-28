@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongo-container-deployment
+  labels:
+    app: mongo-container
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongo-container
+  template:
+    metadata:
+      labels:
+        app: mongo-container
+    spec:
+      containers:
+      - name: mongo-container
+        image: mongo:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 27017
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongo-container-service
+spec:
+  selector:
+    app: mongo-container
+  ports:
+    - protocol: TCP
+      port: 27017

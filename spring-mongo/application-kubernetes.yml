@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-mongo-deployment
+  labels:
+    app: spring-mongo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-mongo
+  template:
+    metadata:
+      labels:
+        app: spring-mongo
+    spec:
+      containers:
+      - name: spring-mongo
+        image: khushi1701/spring-mongo
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 1000
+        env:
+          name: DB_HOST
+          value: mongo
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-mongo-service
+spec:
+  type: NodePort
+  selector:
+    app: spring-mongo
+  ports:
+    - protocol: TCP
+      port: 1000
+      targetPort: 1000
