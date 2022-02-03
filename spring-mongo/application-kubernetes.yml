@@ -21,11 +21,11 @@ spec:
         ports:
         - containerPort: 1000
         env:
-        - name: DB_URL
+        - name: ME_CONFIG_MONGODB_SERVER
           value: mongo
-        - name: DB_USERNAME
+        - name: MONGO_INITDB_ROOT_USERNAME
           value: mongoadmin 
-        - name: DB_PASSWORD
+        - name: MONGO_INITDB_ROOT_PASSWORD
           value: secret 
 ---
 apiVersion: v1
