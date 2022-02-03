@@ -1,0 +1,160 @@
+## DOCKER LOGIN
+docker login -u YOUR-USER-NAME
+docker logout
+
+
+## DOCKER IMAGES
+
+# Docker version
+docker version
+
+# Docker information
+docker info
+
+# Build Docker Image
+docker build -t IMAGE .
+
+# Find All Images
+docker images
+docker image list
+docker image ls 
+
+# Export Docker Image archived
+docker save -o EXPORT_NAME.tar CONTAINER_NAME
+
+# Import Docker Image archived
+docker load -o EXPORT_NAME.tar CONTAINER_NAME
+
+# Pulls if not present & Run Image & Create container
+docker run -p EXPOSE_PORT:CONTAINER_PORT IMAGE
+
+# Run in Detached Mode [Use this]
+docker run -d -p EXPOSE_PORT:CONTAINER_PORT IMAGE
+
+# Remove Image
+docker rmi IMAGE
+
+# Tag Image before Push [Local to Remote]
+docker tag IMAGE REMOTE_IMAGE 
+
+# Push Image
+docker push DOCKER_ID/IMAGE:IMAGE_TAG
+
+# Pull Image
+docker pull IMAGE
+
+
+## DOCKER CONTAINER --> Dockerfile
+
+# Active Container
+docker ps 
+
+# All Containers
+docker ps -a
+
+# Start Container
+docker start CONTAINER_ID / INITIAL 3 Numbers
+docker start CONTAINER_NAME
+
+# Restart Container
+docker restart CONTAINER_ID
+docker restart CONTAINER_NAME
+
+# Auto Restart a container
+docker run -dit — restart [RESTART_POLICY_VALUE] CONTAINER_NAME
+RESTART_POLICY_VALUE = Off, On-failure, Unless-stopped, Always
+
+# Pause Container
+docker pause CONTAINER_ID
+docker pause CONTAINER_NAME
+
+# Un-Pause Container
+docker unpause CONTAINER_ID
+docker unpause CONTAINER_NAME
+
+# Stop Container
+docker stop CONTAINER_ID
+docker stop CONTAINER_NAME
+docker kill CONTAINER_ID
+docker kill CONTAINER_NAME
+
+# Remove Container
+docker rm CONTAINER_ID
+
+# Stop & Remove Container
+docker rm -f CONTAINER_ID
+
+# Linking two container
+docker run -dp 9001:1000 --link <DATABASE_CONTAINER>:<DATABASE_IMAGE> -d <APPLICATION_IMAGE>
+
+# Name a Container
+docker run --name CONTAINER_NAME CONTAINER_ID
+
+# Ip of container
+docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' CONTAINER_ID
+
+# Logs
+docker logs CONTAINER_NAME
+
+# Block the logs
+docker logs -f CONTAINER_NAME
+
+# Latest logs
+docker logs CONTAINER_NAME | tail
+
+
+# Debug
+docker exec -it CONTAINER_ID /bin/bash
+docker exec -it CONTAINER_ID /bin/sh
+
+Then you can specify db related command like cqlsh, mongo to get into that database
+
+1. It will take you to root directory
+2. Use commands like ls, pwd, cd /, env, ls PATH
+
+
+## DOCKER COMPOSE [No Network Required - Put all configurations here] --> Dockerfile + DOCKER_COMPOSE.yml
+# Start
+docker-compose -f DOCKER_COMPOSE.yml UP
+
+# Stop
+docker-compose -f DOCKER_COMPOSE.yml DOWN
+
+
+## DOCKER VOLUMES
+# Single Mount
+
+# Created Volumes [Database Instance]
+docker volume create VOLUME_NAME
+
+# Run Volumes with application
+docker run -dp 3000:3000 -v VOLUME_NAME:PATH IMAGE
+
+# Inspect Volume
+docker volume inspect VOLUME_NAME
+
+# Drop Unused VOLUMES
+docker system prune --volumes
+
+# Bind Mount
+docker run -p EXPOSE_PORT:CONTAINER_PORT 
+     -w APPLICATION_FOLDER -v "$(pwd):APPLICATION_FOLDER" `
+     node:12-alpine `
+     sh -c "yarn install && yarn run dev"
+
+
+# Mongo DB 
+docker run -d  -p 27017:27017 --network mongo-network --name mongo -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=secret mongo
+
+# Mongo Express
+docker run -it --network mongo-network --name mongo-express -p 8081:8081 -e ME_CONFIG_MONGODB_SERVER=mongo -e ME_CONFIG_MONGODB_AUTH_USERNAME=mongoadmin -e ME_CONFIG_MONGODB_AUTH_PASSWORD=secret mongo-express
+
+Note : Dont use 'Docker' keyword in IMAGE, CONTAINER names	
+
+
+# Remove all unused containers, volumes, images
+docker system prune --all
+
+## BEST PRACTICES
+
+docker scan <image-name>
