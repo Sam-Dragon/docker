@@ -20,10 +20,12 @@ docker image list
 docker image ls 
 
 # Export Docker Image archived
-docker save -o EXPORT_NAME.tar CONTAINER_NAME
+docker save CONTAINER_NAME > EXPORT_NAME.tar
+docker save CONTAINER_NAME > EXPORT_NAME.tar.gz
 
 # Import Docker Image archived
-docker load -o EXPORT_NAME.tar CONTAINER_NAME
+docker load < EXPORT_NAME.tar
+docker load < EXPORT_NAME.tar.gz
 
 # Pulls if not present & Run Image & Create container
 docker run -p EXPOSE_PORT:CONTAINER_PORT IMAGE
