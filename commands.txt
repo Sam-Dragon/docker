@@ -2,7 +2,6 @@
 docker login -u YOUR-USER-NAME
 docker logout
 
-
 ## DOCKER IMAGES
 
 # Docker version
@@ -12,7 +11,7 @@ docker version
 docker info
 
 # Build Docker Image
-docker build -t IMAGE .
+docker build -t <IMAGE> .
 
 # Find All Images
 docker images
@@ -40,11 +39,10 @@ docker rmi IMAGE
 docker tag IMAGE REMOTE_IMAGE 
 
 # Push Image
-docker push DOCKER_ID/IMAGE:IMAGE_TAG
+docker push <DOCKER_ID>/<IMAGE>:<IMAGE_TAG>
 
 # Pull Image
-docker pull IMAGE
-
+docker pull <DOCKER_ID>/<IMAGE>:<IMAGE_TAG>
 
 ## DOCKER CONTAINER --> Dockerfile
 
