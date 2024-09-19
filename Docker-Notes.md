@@ -5,8 +5,10 @@
 - Portable artifact are stored in artifactory which could be easily shared and moved around
 
 > Container
-- Running instance of image
+- Running environment of image
 - It has **layers** of images. [applicaltion layer, linux layer]
+- It has virtual file system
+- It has port binded for communication
 - It makes development and deployment more efficient
 
 > Docker vs VM
