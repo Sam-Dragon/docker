@@ -95,7 +95,7 @@
 > Pulls if not present & Run Image & Create container
 - docker run IMAGE
 
-> Run in Port & detached mode [Use this]
+> Port Mapping - Run in Port & detached mode [Use this]
 - docker run -d -p EXPOSE_PORT:CONTAINER_PORT IMAGE
 
 > Run in command [Use this]
