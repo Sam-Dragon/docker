@@ -84,7 +84,7 @@
 - docker run -dp 9001:1000 --link <DATABASE_CONTAINER>:<DATABASE_IMAGE> -d <APPLICATION_IMAGE>
 
 > Run in Detached Mode [Use this]
-- docker run -d -p EXPOSE_PORT:CONTAINER_PORT IMAGE
+- docker run -d IMAGE
 
 > Name a Container
 - docker run --name CONTAINER_NAME CONTAINER_ID
@@ -93,7 +93,13 @@
 - docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' CONTAINER_ID
 
 > Pulls if not present & Run Image & Create container
-- docker run -p EXPOSE_PORT:CONTAINER_PORT IMAGE
+- docker run IMAGE
+
+> Run in Port & detached mode [Use this]
+- docker run -d -p EXPOSE_PORT:CONTAINER_PORT IMAGE
+
+> Run in command [Use this]
+- docker run -d IMAGE <COMMAND>
   
 ## Debug
 > Move into Container
