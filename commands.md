@@ -115,7 +115,8 @@ Then you can specify db related command like cqlsh, mongo to get into that datab
 2. Use commands like ls, pwd, cd /, env, ls PATH
 
 ## DOCKER VOLUMES
-> Single Mount
+> list volumes
+- docker volume ls
 
 > Created Volumes [Database Instance]
 - docker volume create VOLUME_NAME
