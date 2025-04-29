@@ -90,6 +90,7 @@
 - docker run --name CONTAINER_NAME CONTAINER_ID
 
 > Ip of container
+- docker inspect CONTAINER_NAME
 - docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' CONTAINER_ID
 
 > Pulls if not present & Run Image & Create container
