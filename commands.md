@@ -104,7 +104,13 @@
 
 > Run in command [Use this]
 - docker run -d IMAGE <COMMAND>
-  
+
+> Environment variables
+- docker run -e VARIABLE=VALUE CONTAINER_ID
+
+> Inspect environment variables
+- docker inspect CONTAINER_ID
+
 ## Debug
 > Move into Container
 - docker exec -it CONTAINER_ID /bin/bash
