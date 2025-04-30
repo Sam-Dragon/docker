@@ -149,6 +149,9 @@ Then you can specify db related command like cqlsh, mongo to get into that datab
 > Drop Unused VOLUMES
 - docker system prune --volumes
 
+# Remote Docker
+> connect remotely
+- docker -H=REMOTE-SERVER-ENGINE:PORT run IMAGE
 
 ## DOCKER COMPOSE [No Network Required - Put all configurations here] --> Dockerfile + DOCKER_COMPOSE.yml
 > Start
