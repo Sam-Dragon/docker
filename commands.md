@@ -33,6 +33,9 @@
 > Pull Image
 - docker pull <DOCKER_ID>/<IMAGE>:<IMAGE_TAG>
 
+> History
+- docker history <IMAGE>
+
 > Export Docker Image archived
 - docker save CONTAINER_NAME > EXPORT_NAME.tar
 - docker save CONTAINER_NAME > EXPORT_NAME.tar.gz
