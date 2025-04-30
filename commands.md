@@ -111,6 +111,9 @@
 > Inspect environment variables
 - docker inspect CONTAINER_ID
 
+> Override Entry Point
+- docker run --entrypoint <ENTRY_POINT_NAME> <IMAGE>:<TAG>
+
 ## Debug
 > Move into Container
 - docker exec -it CONTAINER_ID /bin/bash
