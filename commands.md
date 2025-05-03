@@ -155,6 +155,7 @@ Then you can specify db related command like cqlsh, mongo to get into that datab
 ## DOCKER NETWORKS
 - docker run <IMAGE> --network=NETWORK_NAME [NONE or HOST, BRiDGE is default]
 
+- docker network ls
 - docker network create --driver NETWORK_TYPE --subnet=IP NETWORK_NAME
 
 # Remote Docker
