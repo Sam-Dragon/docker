@@ -16,3 +16,7 @@
 - Image size: docker images are small in size where as VM are larger
 - Speed: docker container are faster compared to VM
 - Comptibility: VM of any OS can run on any other OS host but not possible with docker [possible with docker toolbox] 
+
+> Docker Networks
+- Auto creates 3 networks - Bridge [Default], None, Host
+- embedded DNS is used for identify the internal ip for a container
