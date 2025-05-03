@@ -152,6 +152,11 @@ Then you can specify db related command like cqlsh, mongo to get into that datab
 > Drop Unused VOLUMES
 - docker system prune --volumes
 
+## DOCKER NETWORKS
+- docker run <IMAGE> --network=NETWORK_NAME [NONE or HOST, BRiDGE is default]
+
+- docker network create --driver NETWORK_TYPE --subnet=IP NETWORK_NAME
+
 # Remote Docker
 > connect remotely
 - docker -H=REMOTE-SERVER-ENGINE:PORT run IMAGE
