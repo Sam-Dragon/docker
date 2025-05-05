@@ -163,11 +163,18 @@ Then you can specify db related command like cqlsh, mongo to get into that datab
 - docker -H=REMOTE-SERVER-ENGINE:PORT run IMAGE
 
 ## DOCKER COMPOSE [No Network Required - Put all configurations here] --> Dockerfile + DOCKER_COMPOSE.yml
-> Start
+
+> Start in detached mode
+- docker compose up -d
+
+> Start with specified file
 - docker-compose -f DOCKER_COMPOSE.yml UP
 
-> Stop
+> Stop with specified file
 - docker-compose -f DOCKER_COMPOSE.yml DOWN
+- 
+> Stop
+- docker compose down
 
 # Mongo DB 
 docker run -d  -p 27017:27017 --network mongo-network --name mongo -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=secret mongo
