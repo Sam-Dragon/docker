@@ -20,3 +20,17 @@
 > Docker Networks
 - Auto creates 3 networks - Bridge [Default], None, Host
 - embedded DNS is used for identify the internal ip for a container
+
+> Docker volumes
+- It is responsible for storing the data of the container
+- Default path: /var/lib/docker
+- It can be changed to any other path. make sure the path is not specified inside container
+- volumes can be shared across the containers
+
+> Docker Linking
+- It is the process of conneting one service with another using --link option.
+- It basically means that one app requires another app to function
+
+> Docker compose
+- It is one place to bring all apps in a network. Explicit linking of apps is not required
+- Deployment is easy as we need single command to run all apps
