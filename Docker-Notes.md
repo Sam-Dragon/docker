@@ -38,3 +38,11 @@
 > YAML [Yet Another Markup Language]
 - It works on key/value pair
 - child objects are indented with spaces [It can contain list[ordered] or dictionary [unordered]]
+
+> JSON PATH
+- top element of json is called root & is denoted by [**$.**]
+- json contains dictionary and array
+- array can be access by index and json can be access by dot
+- criteria can be checked by [$[?(@)]]. ? -> query, @ -> element
+
+- Example: cat <FILE> | jpath $.property
