@@ -34,3 +34,7 @@
 > Docker compose
 - It is one place to bring all apps in a network. Explicit linking of apps is not required
 - Deployment is easy as we need single command to run all apps
+
+> YAML [Yet Another Markup Language]
+- It works on key/value pair
+- child objects are indented with spaces [It can contain list[ordered] or dictionary [unordered]]
