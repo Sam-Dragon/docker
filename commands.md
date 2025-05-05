@@ -176,6 +176,13 @@ Then you can specify db related command like cqlsh, mongo to get into that datab
 > Stop
 - docker compose down
 
+## JSON PATH
+> Find 
+- cat <FILE> | jpath $.property
+
+> Find with rex
+- 
+
 # Mongo DB 
 docker run -d  -p 27017:27017 --network mongo-network --name mongo -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=secret mongo
 
