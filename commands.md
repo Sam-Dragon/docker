@@ -167,12 +167,18 @@ Then you can specify db related command like cqlsh, mongo to get into that datab
 > Start in detached mode
 - docker compose up -d
 
+> Start & Build in detached mode
+- docker compose up -d --build
+
+> Build all imcontainer
+- docker compose build
+
 > Start with specified file
 - docker-compose -f DOCKER_COMPOSE.yml UP
 
 > Stop with specified file
 - docker-compose -f DOCKER_COMPOSE.yml DOWN
-- 
+
 > Stop
 - docker compose down
 
@@ -180,8 +186,6 @@ Then you can specify db related command like cqlsh, mongo to get into that datab
 > Find 
 - cat <FILE> | jpath $.property
 
-> Find with rex
-- 
 
 # Mongo DB 
 docker run -d  -p 27017:27017 --network mongo-network --name mongo -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=secret mongo
