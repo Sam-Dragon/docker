@@ -23,6 +23,7 @@
 
 > Remove Image
 - docker rmi IMAGE
+- docker rmi -f IMAGE # Force Remove
 
 > Tag Image before Push [Local to Remote]
 - docker tag IMAGE REMOTE_IMAGE 
