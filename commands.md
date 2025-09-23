@@ -80,7 +80,7 @@
 > Remove Container
 - docker rm CONTAINER_ID
 
-> Stop & Remove Container
+> Stop & Remove Container Forcibally
 - docker rm -f CONTAINER_ID
 
 > Linking two container
