@@ -10,7 +10,7 @@
 - docker info
 
 > Remove all unused containers, volumes, images
-- docker system prune --all
+- **docker system prune --all**
 
 ## Images
 > Find All Images
