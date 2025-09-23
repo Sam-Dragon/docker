@@ -1,3 +1,8 @@
 # Dockerfile
 
-FROM --> JDK / SDK
+**FROM** --> JDK / SDK
+**WORKDIR**
+**COPY**
+**ENV**
+**CMD**
+**ENTRYPOINT**
