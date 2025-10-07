@@ -1,5 +1,10 @@
 # Docker
 
+> Docker
+- Packaging manager which contains application along with its dependencies and libraries
+- It isolates one container from another
+- It shares the System OS
+
 > Image
 - Package application with all necessay configuration and dependencies
 - Portable artifact are stored in artifactory which could be easily shared and moved around
