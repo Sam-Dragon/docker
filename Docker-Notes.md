@@ -1,7 +1,7 @@
 # Docker
 
 > Docker
-- Packaging manager which contains application along with its dependencies and libraries
+- Packaging manager which contains application along with its dependencies and libraries which can be easily moved around
 - It isolates one container from another
 - It shares the System OS
 
