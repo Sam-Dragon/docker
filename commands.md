@@ -20,6 +20,7 @@
 
 > Build Docker Image
 - docker build -t <IMAGE> .
+- docker build . -f Dockerfile -t <IMAGE>
 
 > Remove Image
 - docker rmi IMAGE
