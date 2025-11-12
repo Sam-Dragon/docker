@@ -61,3 +61,9 @@
 - criteria can be checked by [$[?(@)]]. ? -## query, @ -## element
 
 - Example: cat <FILE## | jpath $.property
+
+## Architecture
+- Docker Engine is sub-divided into 3 parts
+  - Docker Cli: It is the interface from where the commands are published to docker
+  - Rest API: It will call the appropriate endpoint to run the job through docker deamon for execution and return its result to docker cli
+  - Docker Deamon: It will actaully execute the docker command and provide result back to rest api
