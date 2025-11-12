@@ -116,6 +116,9 @@
 > Override Entry Point
 - docker run --entrypoint <ENTRY_POINT_NAME> <IMAGE>:<TAG>
 
+> Limit the CPU and Memory 
+- docker run --cpu=0.5 --memory=1GB <IMAGE> 
+
 > Find process id
 - docker exec -d ps -eaf
 
