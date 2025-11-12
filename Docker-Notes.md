@@ -67,3 +67,5 @@
   - Docker Cli: It is the interface from where the commands are published to docker
   - Rest API: It will call the appropriate endpoint to run the job through docker deamon for execution and return its result to docker cli
   - Docker Deamon: It will actaully execute the docker command and provide result back to rest api
+- Docker uses namespaces to logically seperate the components
+- Docker uses cgroups to allocate hardware resources [cpu and memory]  
