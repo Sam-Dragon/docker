@@ -12,6 +12,10 @@
 > Remove all unused containers, volumes, images
 - **docker system prune --all**
 
+> View all the docker system usage
+- docker system df
+- docker system df -v
+
 ## Images
 > Find All Images
 - docker images
