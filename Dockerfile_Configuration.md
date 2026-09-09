@@ -1,8 +1,8 @@
 # Dockerfile
 
 - **FROM** --> JDK / SDK
-- **WORKDIR**
-- **COPY**
-- **ENV**
-- **CMD**
-- **ENTRYPOINT**
+- **WORKDIR** --> Current Directory
+- **COPY** --> Copy files from current directory to docker directory
+- **ENV** --> Provide all config parameters
+- **ENTRYPOINT** --> All commands types
+- **CMD**  --> Command values
