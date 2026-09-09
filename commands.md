@@ -1,5 +1,5 @@
-## Brand New Project
-> DOCKER INITIALIZATION
+## New Project
+> DOCKER INITIALIZATION <br> 
 - docker init [go to project directory]
 
 ## Common
