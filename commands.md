@@ -1,3 +1,7 @@
+## Brand New Project
+> DOCKER INITIALIZATION
+- docker init [go to project directory]
+
 ## Common
 > DOCKER LOGIN <br>
 - docker login -u YOUR-USER-NAME <br>
